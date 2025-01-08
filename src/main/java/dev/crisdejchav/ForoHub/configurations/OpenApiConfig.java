@@ -23,13 +23,13 @@ public class OpenApiConfig {
                             .bearerFormat("JWT"))
             )
             .info(new Info()
-                    .title("Voll.med API")
-                    .description("API Rest de la aplicación Voll.med, que contiene las funcionalidades CRUD de médicos y de pacientes, además de reserva y cancelamiento de consultas")
+                    .title("ForoHub API")
+                    .description("Api para el challenge forohub")
                     .contact(new Contact()
-                            .name("Equipo Backend")
-                            .email("backend@voll.med"))
+                            .name("Cristian Chavez")
+                            .email("crisdejchav@gmail.com"))
                     .license(new License()
                             .name("Apache 2.0")
-                            .url("http://voll.med/api/licencia")));
+                            .url("http://www.apache.org/licenses/LICENSE-2.0.html")));
     }
 }

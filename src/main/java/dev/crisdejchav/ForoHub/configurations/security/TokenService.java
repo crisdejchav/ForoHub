@@ -20,7 +20,7 @@ public class TokenService {
     private String secretKey;
 
     public String getSubject(String token) {
-        if(token != null){
+        if(token == null){
             throw new RuntimeException();
         }
         DecodedJWT verifier = JWT.decode(token);
@@ -32,9 +32,9 @@ public class TokenService {
             .verify(token);
             verifier.getSubject();
         }catch(Exception e){
-            System.out.println(e.getMessage());
+            System.out.println("Ocurrio un error en el verifier");
         }
-        if(verifier.getSubject() != null){
+        if(verifier.getSubject() == null){
             throw new RuntimeException();
         }
         return verifier.getSubject();

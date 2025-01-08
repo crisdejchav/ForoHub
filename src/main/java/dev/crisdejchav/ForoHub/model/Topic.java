@@ -18,17 +18,17 @@ public class Topic {
     private Long id;
     private String title;
     private String message;
-    private LocalDateTime creationDate;
-    private boolean status;
+    private LocalDateTime created_at;
+    private String status;
     private String author;
-    @Enumerated(EnumType.STRING) @Column(name = "curse")
+    @Enumerated(EnumType.STRING) @Column(name = "course")
     private Course course;
 
     public Topic(TopicDTO topicDTO) {
         this.title = topicDTO.title();
         this.message = topicDTO.message();
-        this.creationDate = createDate();
-        this.status = true;
+        this.created_at = createDate();
+        this.status = "true";
         this.author = topicDTO.author();
         this.course = topicDTO.course();
     }
@@ -48,6 +48,6 @@ public class Topic {
  
 
     public void deactivateTopic() {
-        this.status = false;
+        this.status = "false";
     }
 }
